@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RahulArora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <style>
+        *
+        {
+            font-family: 'Roboto Condensed', sans-serif;
+            box-sizing: border-box;
+        }
+        /* elements */
+        body
+        {
+            background-color: rgb(37, 37, 37);
+        }
+        td
+        {
+            font-size: large;
+            padding-top: 5px;
+            padding-left:15px;
+            padding-right:15px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        table
+        {
+            color: white;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0px;
+        }
+        a
+        {
+            color: rgb(244, 243, 245);
+        }
+        a:hover
+        {
+            background-color: maroon;
+        }
+        span
+        {
+            background-color: rgb(192, 55, 55);
+            border-radius: 7px;
+            padding: 2px;
+        }
+        li
+        {
+            display: inline;
+        }
+        img
+        {
+            margin: auto;
+        }
+        th
+        {
+            color: rgb(195, 114, 114);
+        }
+        /* classes */
+        .child
+        {
+            float: left;
+            width: 50%;
+            /*display: flex*/
+        }
+        .intro
+        {
+            text-align: center;
+            margin-top: 0%;
+        }
+        .heading
+        {
+            text-align: center;
+        }
+        .hexagon{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5px;
+            width: 25%;
+            clip-path: polygon( 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25% );
+        }
+        .child2
+        {
+            float:left;
+            /*border: 2px solid red;*/
+            width: 50%;
+            color: rgb(203, 56, 56);;
+        }
+        .lists
+        {
+            list-style: none;
+            color: white;
+        }
+        /* ids */
+        #contacts
+        {
+            margin-left: 0px;
+            list-style: none;
+            line-height: 1.5rem;
+        }
+        #myself
+        {
+            line-height: 2rem;
+            margin-right: 2px;
+            font-size: large;
+        }
+        #name
+        {
+            color: aliceblue;
+            width: 50%;
+            margin: 0px;
+            float: left;
+        }
+        #details
+        {
+            color: rgb(247, 249, 250);
+            border: 2px solid rgb(203, 56, 56);
+            margin:0px;
+            width: 50%;
+            background-color: rgb(203, 56, 56);
+            float: left;
+        }
+        /* media queries */
+        @media only screen and (max-width:900px)
+        {
+            .child
+            {
+                clear: left;
+                text-align: center;
+                width: 100%;
+            }
+            #details
+            {
+                align-items: center;
+                overflow: hidden;
+                width: 100%;
+                clear: left;
+            }
+            #name
+            {
+                width: 100%;
+                clear: left;
+            }
+            #workexp
+            {
+                margin: auto;
+            }
+            .child2
+            {
+                clear: left;
+                text-align: center;
+                align-items: center;
+               width: 100%;
+            }
+            .heading
+            {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="name">
+        <img class="hexagon" src="275167136_952772308771378_7025472662285092851_n.jpeg" alt="">
+        <h1 class="intro">Rahul Arora</h1>
+        <h3 class="intro">Software Engineer @ Havells
+        </h3>
+    </div>
+    <div id="details">
+        <div class="child">
+            <h1 class="heading"><strong>CONTACT ME</strong></h1>
+            <ul id="contacts">
+                <li><img align="left" src="telephone.png" alt=""><h4>&nbsp;&nbsp;Mobile No.: 7307140364</h4></li>
+                
+                <li><img align="left" src="email.png" alt=""><h4>&nbsp;&nbsp;gmail: ra9853044@gmail.com</h4></li>
+                <li><img align="left" src="github.png" alt=""><h4>&nbsp;&nbsp;github: <a href="https://github.com/Rahula-12"
+                     target="_blank">
+                https://github.com/Rahula-12</a></h4></li>
+                <li><img align="left" src="linkedin.png" alt=""><h4>&nbsp;&nbsp;linkedin: <a href="https://www.linkedin.com/in/rahul-arora-71a2bb18b/" target="_blank">https://www.linkedin.com/in/rahul-arora-71a2bb18b/</a></h4></li>
+            </ul>
+        </div>
+        <div class="child">
+            <h1 class="heading">ABOUT ME</h1>
+            <h3 id="myself">Hi, I'm Rahul from Amritsar,Punjab.I'am pursuing B.Tech(I.T.) from NIT Jalandhar. I'm upcoming Software Engineer at Havells Noida.</h3>
+        </div>
+    </div>
+    <div class="otherdetails">
+        <div class="child2">
+            <div id="workexp">
+               <h1 class="heading">Work Experience</h1>
+                <table>
+                    <!-- <tr>
+                        <th><h2>Duration</h2></th>
+                        <th><h2>Experience</h2></th>
+                    </tr> -->
+                    <tr>
+                        <td>June 2022-August 2022</td>
+                        <td><h3 class="heading">Interned at Samsung Research Institute Bangalore(SRIB).</h3>
+                        <ul class="lists">
+                            <li>Worked in Network Analytics department.</li>
+                            <li>Did research based project related to video streaming backend server.</li>
+                        </ul></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="education">
+                <h1 class="heading">Education</h1>
+                <table>
+                   <!-- <tr>
+                    <th>
+                        <h2>Organization</h2>
+                    </th>
+                    <th>
+                        <h2>Duration</h2>
+                    </th>
+                    <th>
+                        <h2>Degree</h2>
+                    </th>
+                    <th>
+                        <h2>Score</h2>
+                    </th>
+                   </tr> -->
+                    <tr>
+                    <td>NIT Jalandhar</td>
+                    <td>2019-2023</td>
+                    <td>B.Tech(I.T.)</td>
+                    <td>8.19 CGPA</td>
+                    </tr>
+                    <tr>
+                        <td>Shri Ram Ashram Public School</td>
+                        <td>2018-2019</td>
+                        <td>12th</td>
+                        <td>92%</td>
+                        </tr>
+                        <tr>
+                            <td>Shri Ram Ashram Public School</td>
+                            <td>2016-2017</td>
+                            <td>10th</td>
+                            <td>10 CGPA</td>
+                        </tr>
+                </table>
+            </div>
+        </div>
+        <div class="child2">
+            <div id="achievements">
+                <h1 class="heading">Achievements</h1>
+                <table>
+                    <!-- <tr>
+                        <th>
+                            <h2>Achievement</h2>
+                        </th>
+                        <th>
+                            <h2>Proof</h2>
+                        </th>
+                    </tr> -->
+                    <tr>
+                    <td>1800+ rating at Leetcode</td>
+                    <td><a href="https://leetcode.com/rahula_23/"
+                        target="_blank">Click here to see</a></td>
+                    </tr>
+                    <tr>
+                        <td>5 start coder at HackerRank(problem solving)</td>
+                        <td><a href="https://www.hackerrank.com/ra9853044"
+                            target="_blank">Click here to see</a></td>
+                    </tr>
+                    <tr>
+                        <td>1600+ score at GeeksForGeeks</td>
+                        <td><a href="https://auth.geeksforgeeks.org/user/ra9853044/profile"
+                            target="_blank">Click here to see</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="skills">
+                <h1 class="heading">Skills</h1>
+                <table>
+                    <!-- <tr>
+                        <th><h2>Skill</h2></th>
+                        <th><h2>Score</h2></th>
+                    </tr> -->
+                    <tr>
+                        <td>Data Structures and Algorithms</td>
+                        <td><progress max="100" value="90"></progress></td>
+                    </tr>
+                    <tr>
+                        <td>Java</td>
+                        <td><progress max="100" value="70"></progress></td>
+                    </tr>
+                    <tr>
+                        <td>C++</td>
+                        <td><progress max="100" value="50"></progress></td>
+                    </tr>
+                    <tr>
+                        <td>HTML</td>
+                        <td><progress max="100" value="30"></progress></td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td><progress max="100" value="30"></progress></td>
+                    </tr>
+                    <tr>
+                        <td>Android Development</td>
+                        <td><progress max="100" value="30"></progress></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
