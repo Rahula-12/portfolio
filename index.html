@@ -1,308 +1,147 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RahulArora</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
-    <style>
-        *
-        {
-            font-family: 'Roboto Condensed', sans-serif;
-            box-sizing: border-box;
-        }
-        /* elements */
-        body
-        {
-            background-color: rgb(37, 37, 37);
-        }
-        td
-        {
-            font-size: large;
-            padding-top: 5px;
-            padding-left:15px;
-            padding-right:15px;
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        table
-        {
-            color: white;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 0px;
-        }
-        a
-        {
-            color: rgb(244, 243, 245);
-        }
-        a:hover
-        {
-            background-color: maroon;
-        }
-        span
-        {
-            background-color: rgb(192, 55, 55);
-            border-radius: 7px;
-            padding: 2px;
-        }
-        img
-        {
-            margin: auto;
-        }
-        th
-        {
-            color: rgb(195, 114, 114);
-        }
-        /* classes */
-        .child
-        {
-            float: left;
-            width: 50%;
-            /*display: flex*/
-        }
-        .intro
-        {
-            text-align: center;
-            margin-top: 0%;
-        }
-        .heading
-        {
-            text-align: center;
-        }
-        .hexagon{
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 5px;
-            width: 25%;
-            clip-path: polygon( 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25% );
-        }
-        .child2
-        {
-            float:left;
-            /*border: 2px solid red;*/
-            width: 50%;
-            color: rgb(203, 56, 56);;
-        }
-        .lists
-        {
-            color: white;
-        }
-        /* ids */
-        #contacts
-        {
-            margin-left: 0px;
-            list-style: none;
-            line-height: 1.5rem;
-        }
-        #myself
-        {
-            line-height: 2rem;
-            margin-right: 2px;
-            font-size: large;
-        }
-        #name
-        {
-            color: aliceblue;
-            width: 50%;
-            margin: 0px;
-            float: left;
-        }
-        #details
-        {
-            color: rgb(247, 249, 250);
-            border: 2px solid rgb(203, 56, 56);
-            margin:0px;
-            width: 50%;
-            background-color: rgb(203, 56, 56);
-            float: left;
-        }
-        /* media queries */
-        @media only screen and (max-width:900px)
-        {
-            .child
-            {
-                clear: left;
-                text-align: center;
-                width: 100%;
-            }
-            #details
-            {
-                align-items: center;
-                overflow: hidden;
-                width: 100%;
-                clear: left;
-            }
-            #name
-            {
-                width: 100%;
-                clear: left;
-            }
-            #workexp
-            {
-                margin: auto;
-            }
-            .child2
-            {
-                clear: left;
-                text-align: center;
-                align-items: center;
-               width: 100%;
-            }
-            .heading
-            {
-                text-align: center;
-            }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rahul Arora — Senior Software Engineer</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#94a3b8;color-scheme:dark}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:linear-gradient(180deg,#071024 0%, #07142a 100%);color:#e6eef6;line-height:1.5}
+    .wrap{max-width:900px;margin:36px auto;padding:28px;background:rgba(255,255,255,0.02);border-radius:12px;box-shadow:0 6px 24px rgba(2,6,23,0.6)}
+    header{display:flex;gap:20px;align-items:center}
+    .avatar{width:84px;height:84px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700}
+    h1{margin:0;font-size:1.6rem}
+    .role{margin:4px 0;color:var(--muted)}
+    .links{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    a{color:var(--accent);text-decoration:none}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:22px;margin-top:20px}
+    @media (max-width:880px){.grid{grid-template-columns:1fr}}
+    .card{background:rgba(255,255,255,0.02);padding:16px;border-radius:10px}
+    h2{margin:0 0 8px 0}
+    ul{margin:8px 0 0 18px;padding:0}
+    .muted{color:var(--muted);font-size:0.95rem}
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+    .chip{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;font-size:0.9rem}
+    .projects a{display:inline-block;margin-top:6px}
+    footer{margin-top:22px;color:var(--muted);font-size:0.9rem;text-align:center}
+  </style>
 </head>
 <body>
-    <div id="name">
-        <img class="hexagon" src="275167136_952772308771378_7025472662285092851_n.jpeg" alt="">
-        <h1 class="intro">Rahul Arora</h1>
-        <h3 class="intro">Graduate Engineer Trainee @ Havells
-        </h3>
+  <main class="wrap">
+    <header>
+      <div class="avatar" aria-hidden="true">RA</div>
+      <div>
+        <h1>Rahul Arora</h1>
+        <div class="role">Senior Software Engineer — Android</div>
+        <div class="muted">Noida, India • ra9853044@gmail.com • +91 73071 40364</div>
+        <div class="links">
+          <a href="https://github.com/Rahula-12" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/rahul-arora-71a2bb18b/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://leetcode.com/u/rahula_23/" target="_blank" rel="noopener">LeetCode</a>
+          <a href="https://www.geeksforgeeks.org/user/ra9853044/" target="_blank" rel="noopener">GeeksforGeeks</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <section>
+        <div class="card">
+          <h2>About</h2>
+          <p class="muted">Senior Android developer with strong hands-on experience building production Android apps using Kotlin, Jetpack libraries (Compose / ViewModel / Room), MVVM architecture, Retrofit, and dependency injection (Hilt). Experienced in designing features end-to-end, writing unit/UI tests, and collaborating with cross-functional teams to ship quality releases.</p>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h2>Work Experience</h2>
+
+          <h3 style="margin:10px 0 4px 0">Havells India Ltd. — Senior Software Engineer</h3>
+          <div class="muted">Apr 2025 – Present • Havells Head Office, Noida</div>
+          <ul>
+            <li>Designing and developing Android apps including Havells One, EPLUS and Employee apps using Kotlin, Retrofit and MVVM.</li>
+            <li>Led code & design reviews; ensured code-quality and best practices across the team.</li>
+            <li>Collaborated cross-functionally to deliver features and smooth integrations for multiple product apps.</li>
+          </ul>
+
+          <h3 style="margin:10px 0 4px 0">Havells India Ltd. — Software Engineer</h3>
+          <div class="muted">Jul 2023 – Mar 2025 • Noida</div>
+          <ul>
+            <li>Built and maintained apps such as mKonnect, Sampark, MotorConnect using Kotlin, MVVM and Jetpack libraries.</li>
+            <li>Introduced improvements that reduced code complexity and improved team delivery (unit tests, CI-friendly practices).</li>
+          </ul>
+
+          <h3 style="margin:12px 0 4px 0">Samsung Research Institute Bangalore — Intern</h3>
+          <div class="muted">Jun 2022 – Aug 2022</div>
+          <ul>
+            <li>Worked on network analytics and research on video streaming back-end systems.</li>
+          </ul>
+        </div>
+
+        <div class="card projects" style="margin-top:16px">
+          <h2>Selected Projects</h2>
+          <div>
+            <strong>Whatsapp Automator</strong>
+            <div class="muted">Android app to schedule & send WhatsApp messages automatically.</div>
+            <a href="https://github.com/Rahula-12/WhatsappAutomator" target="_blank">GitHub</a> •
+            <a href="https://github.com/Rahula-12/WhatsappAutomator/releases/download/WhatsappAutomator/WhatsAppAutomator.apk" target="_blank">APK</a>
+          </div>
+
+          <div style="margin-top:10px">
+            <strong>TicTacToe</strong>
+            <div class="muted">Classic TicTacToe with online support.</div>
+            <a href="https://github.com/Rahula-12/TicTacToeGame" target="_blank">GitHub</a> •
+            <a href="https://github.com/Rahula-12/TicTacToeGame/releases/download/latest/TicTacToe.apk" target="_blank">APK</a>
+          </div>
+
+          <div style="margin-top:10px">
+            <strong>GenZ AI</strong>
+            <div class="muted">AI chatbot Android app built using Google Gemini model.</div>
+            <a href="https://github.com/Rahula-12/GenzAI" target="_blank">GitHub</a> •
+            <a href="https://github.com/Rahula-12/GenzAI/releases/download/GenZAI/GenZAI.apk" target="_blank">APK</a>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h2>Education</h2>
+          <div><strong>NIT Jalandhar</strong> — B.Tech, Information Technology (2019–2023)</div>
+        </div>
+      </section>
+
+      <aside>
+        <div class="card">
+          <h2>Skills</h2>
+          <div class="skills">
+            <span class="chip">Kotlin</span>
+            <span class="chip">Java</span>
+            <span class="chip">Jetpack Compose</span>
+            <span class="chip">Android SDK</span>
+            <span class="chip">MVVM</span>
+            <span class="chip">Hilt / Dagger</span>
+            <span class="chip">Room</span>
+            <span class="chip">Retrofit</span>
+            <span class="chip">Coroutines</span>
+            <span class="chip">JUnit / Espresso</span>
+            <span class="chip">Mockito</span>
+            <span class="chip">Gradle</span>
+            <span class="chip">Material Design</span>
+            <span class="chip">REST APIs</span>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h2>Contact</h2>
+          <div class="muted">ra9853044@gmail.com</div>
+          <div class="muted">+91 73071 40364</div>
+          <div style="margin-top:8px">
+            <a href="https://github.com/Rahula-12" target="_blank">GitHub</a><br>
+            <a href="https://www.linkedin.com/in/rahul-arora-71a2bb18b/" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+      </aside>
     </div>
-    <div id="details">
-        <div class="child">
-            <h1 class="heading"><strong>CONTACT ME</strong></h1>
-            <ul id="contacts">
-                <li><img align="left" src="telephone.png" alt=""><h4>&nbsp;&nbsp;Mobile No.: 7307140364</h4></li>
-                
-                <li><img align="left" src="email.png" alt=""><h4>&nbsp;&nbsp;gmail: ra9853044@gmail.com</h4></li>
-                <li><img align="left" src="github.png" alt=""><h4>&nbsp;&nbsp;github: <a href="https://github.com/Rahula-12"
-                     target="_blank">
-                https://github.com/Rahula-12</a></h4></li>
-                <li><img align="left" src="linkedin.png" alt=""><h4>&nbsp;&nbsp;linkedin: <a href="https://www.linkedin.com/in/rahul-arora-71a2bb18b/" target="_blank">https://www.linkedin.com/in/rahul-arora-71a2bb18b/</a></h4></li>
-            </ul>
-        </div>
-        <div class="child">
-            <h1 class="heading">ABOUT ME</h1>
-            <h3 id="myself">Hi, I'm Rahul from Amritsar,Punjab.I'am a graduate of B.Tech(I.T.) from NIT Jalandhar. 
-                I'm a Graduate Engineer Trainee at Havells Noida. I am looking for an Android Developer Role these days.</h3>
-        </div>
-    </div>
-    <div class="otherdetails">
-        <div class="child2">
-            <div id="workexp">
-               <h1 class="heading">Work Experience</h1>
-                <table>
-                    <!-- <tr>
-                        <th><h2>Duration</h2></th>
-                        <th><h2>Experience</h2></th>
-                    </tr> -->
-                    <tr>
-                        <td>January 2023-Present</td>
-                        <td><h3 class="heading">Graduate Engineer Trainee at Havells Head Office, Noida.</h3>
-                        <ol class="lists" type="i">
-                            <li>Working in Mobile Application Development Team.</li>
-                            <br>
-                            <ol class="lists" type="1">
-                                <li>Integrated the Api(which contains data of manufactured goods at manufacturing plant) in the Havells mKonnect Android Application using Retrofit.</li>
-                                <br>
-                                <li>Added Firebase Authentication in Havells EPLUS Application.</li>
-                                <br>
-                                <li>Integrated the Api(which contains data of Havells Products) in the Havells Digi Catalogue Android Application using Retrofit.</li>
-                                <br>
-                                <li>Worked on UI Design of Havells Digi Catalogue Android Application.</li>
-                            </ol>
-                        </ol>
-                    </td>
-                    </tr>
-                    <tr>
-                        <td>June 2022-August 2022</td>
-                        <td><h3 class="heading">Interned at Samsung Research Institute Bangalore(SRIB).</h3>
-                        <ol class="lists" type="i">
-                            <li>Worked in Network Analytics department.</li>
-                            <!-- <br> -->
-                            <li>Did research based project related to video streaming backend server.</li>
-                        </ol>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <div class="child2">
-            <div id="education">
-                <h1 class="heading">Education</h1>
-                <table>
-                   <!-- <tr>
-                    <th>
-                        <h2>Organization</h2>
-                    </th>
-                    <th>
-                        <h2>Duration</h2>
-                    </th>
-                    <th>
-                        <h2>Degree</h2>
-                    </th>
-                    <th>
-                        <h2>Score</h2>
-                    </th>
-                   </tr> -->
-                    <tr>
-                    <td>NIT Jalandhar</td>
-                    <td>2019-2023</td>
-                    <td>B.Tech(I.T.)</td>
-                    <td>8.19 CGPA</td>
-                    </tr>
-                    <tr>
-                        <td>Shri Ram Ashram Public School</td>
-                        <td>2018-2019</td>
-                        <td>12th</td>
-                        <td>92%</td>
-                        </tr>
-                        <tr>
-                            <td>Shri Ram Ashram Public School</td>
-                            <td>2016-2017</td>
-                            <td>10th</td>
-                            <td>10 CGPA</td>
-                        </tr>
-                </table>
-            </div>
-            <div id="skills">
-                <h1 class="heading">Skills</h1>
-                <table>
-                    <tr>
-                        <td>Android Development</td>
-                        <td><progress max="100" value="80"></progress></td>
-                    </tr>
-                    <tr>
-                        <td>Data Structures and Algorithms</td>
-                        <td><progress max="100" value="80"></progress></td>
-                    </tr>
-                    <tr>
-                        <td>Kotlin</td>
-                        <td><progress max="100" value="70"></progress></td>
-                    </tr>
-                    <tr>
-                        <td>Java</td>
-                        <td><progress max="100" value="70"></progress></td>
-                    </tr>
-                    <tr>
-                        <td>Coroutines</td>
-                        <td><progress max="100" value="50"></progress></td>
-                    </tr>
-                    <tr>
-                        <td>Retrofit</td>
-                        <td><progress max="100" value="50"></progress></td>
-                    </tr>
-                    <tr>
-                        <td>Room</td>
-                        <td><progress max="100" value="50"></progress></td>
-                    </tr>
-                    <tr>
-                        <td>Dagger</td>
-                        <td><progress max="100" value="40"></progress></td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
+
+    <footer>
+      Updated to reflect resume details (Rahul Arora — Senior Software Engineer). Links/experience taken from resume.
+    </footer>
+  </main>
 </body>
 </html>
